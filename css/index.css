@@ -1,6 +1,6 @@
 <style type="text/css">
         a{color:gray;}   
-        body{font-height:2em;}
+        a{line-height:2em;}
         a{text-decoration: none;}  
 	a:hover{text-decoration: underline;}
         #one{font-weight:bolder;
@@ -11,4 +11,7 @@
 	a{color:gray;}
 	a{font-size:12px;}
 	a{font-family:'Arial';}	
+	.temp{font-size:14px;color:white;}
+	th a:hover{text-decoration:none}
+	th a:hover{color:#b9f605;}
 </style>
