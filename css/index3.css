@@ -1,0 +1,20 @@
+<style type="text/css">
+        a{color:gray;}   
+        a{line-height:2em;}
+        a{text-decoration: none;}  
+	a:hover{text-decoration: underline;}
+        #one{font-weight:bolder;
+             font-size:16px;
+             color:#65a7d0;
+             font-family:'Î¢ÈíÑÅºÚ'£»
+             }
+	a{color:gray;}
+	a{font-size:12px;}
+	a{font-family:'Arial';}	
+	.temp{font-size:14px;color:white;}
+	th a:hover{text-decoration:none}
+	th a:hover{color:#b9f605;}
+	tr.no1{background-color:#F0FFFF}
+	ul.no2{background-color:#F0FFFF}
+	li.no3{list-style-type:none;}
+</style>
