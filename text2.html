@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calculate</title> 
+	<meta charset="utf-8" />
+	<style>      
+		.jsj{        
+			width: 360px;      
+			} 
+		.jsj input{  width: 50px;  height: 50px;  margin-top: 10px; } 
+		.no1{
+				width: 150px;
+		}
+		ul{
+			list-style-type: none;
+		} 
+		#txt{
+			width: 154px;
+		}
+	</style>     
+	<script type="text/javascript">    
+		var num1;   
+		var num2;    
+		var index;   
+		function clearOut(){                   
+			document.getElementById("txt").value=0; }    
+		function getCount(count){                  
+				var num=document.getElementById("txt").value;                    
+			if(num==0){num="";}     
+				document.getElementById("txt").value=num+count; }     
+			function zhi(p) { 
+			if("+"==p)  
+			{  
+				num1=document.getElementById("txt").value;   
+				index="+";  
+				document.getElementById("txt").value="";
+			}    
+			if("-"==p)   
+			{  
+				num1=document.getElementById("txt").value; 
+				index="-";   
+				document.getElementById("txt").value=""; 
+			}    
+			if("*"==p)   
+			{  
+				num1=document.getElementById("txt").value;
+				index="*"; 
+				document.getElementById("txt").value=""; 
+			}    
+			if("/"==p)     
+			{  
+				num1=document.getElementById("txt").value;  
+				index="/";  
+				document.getElementById("txt").value=""; 
+				}    
+			else if("="==p)
+			{    
+				if(index=="+")   
+					{  
+						num2=document.getElementById("txt").value;   
+						document.getElementById("txt").value=Number(num1)+Number(num2) 
+					}       
+				if(index=="-")       
+					{  
+						num2=document.getElementById("txt").value;  
+						document.getElementById("txt").value=Number(num1)-Number(num2); 
+					}        
+				if(index=="*")        
+					{  
+						num2=document.getElementById("txt").value;  
+						document.getElementById("txt").value=Number(num1)*Number(num2); 
+						}         
+				if(index=="/")        
+					{  
+						num2=document.getElementById("txt").value;  
+						document.getElementById("txt").value=Number(num1)/Number(num2); 
+					} 
+				}
+		  }  
+	</script>
+</head>
+<body> 
+	<div class="jsj">
+	<ul>     
+	<li><input type="text" id="txt" value="0"> 
+		<input type="button" id="clear" value="C" onClick="clearOut()"> 
+	</li>                            
+	<li>                            
+	<input type="button"  value="1" id="one" onClick="getCount(1)">                                
+	<input type="button"  value="2" id="two" onClick="getCount(2)">  
+	<input type="button"  value="3" id="three" onClick="getCount(3)">
+	<input type="button"  value="+" id="jia"  onClick="zhi('+')">
+	</li>                               
+	<li><input type="button"  value="4" id="four" onClick="getCount(4)">                              
+	<input type="button"  value="5" id="five" onClick="getCount(5)">                              
+	<input type="button"  value="6" id="six" onClick="getCount(6)">
+	<input type="button"  value="-" id="jian" onClick="zhi('-')" > 
+	</li>
+	<li>
+	<input type="button"  value="7" id="seven" onClick="getCount(7)">                               
+	<input type="button"  value="8" id="eight" onClick="getCount(8)">                              
+	<input type="button"  value="9" id="nine" onClick="getCount(9)">
+	<input type="button"  value="*" id="cheng"  onClick="zhi('*')">                         
+	</li>  
+	<li>
+	<input type="button"  value="0" id="zero" onClick="getCount(0)"> 
+	<input type="button"  value="." id="point" onClick="getCount('.')"> 
+	<input type="button"  value="=" id="dengyu" onClick="zhi('=')">
+	<input type="button"  value="/" id="chu" onClick="zhi('/')">
+	</li>                
+	</ul>
+	</div> 
+</body>
+</html>
