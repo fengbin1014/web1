@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<!-- <head>
+	<title>表单验证</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var container=document.getElementById("container");
+			var setBgColor=document.getElementById("setBgColor");
+			setBgColor.onclick=function(){
+				container.style.backgroundColor="pink";
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div background-color="blue">背景颜色</div>
+	<input type="button" name="重置">
+</body>
+</html> -->
+<head>
+	<meta charset="utf-8">
+	<title>图片滚动</title>
+</head>
+<body>
+<style type="text/css">
+	#picScroll {
+		white-space: nowrap; 
+		overflow:hidden;
+		width:600px;
+	}
+	#picScroll1 {
+		float: left;
+	}
+	#picScroll2 {
+		float: left;
+	}
+</style>
+	<div id="picScroll">
+			<span id="picScroll1">
+				<img src="images/1.jpg" />
+				<img src="images/2.jpg" />
+				<img src="images/3.jpg" />
+				<img src="images/4.jpg" />
+				<img src="images/5.jpg" />
+				<img src="images/6.jpg" />
+				<img src="images/7.jpg" />
+				<img src="images/8.jpg" />
+			</span>
+			<span id="picScroll2"></span>
+	</div>
+<script>
+	var speed=10;
+	var m=document.getElementById("picScroll");
+	var m1=document.getElementById("picScroll1");
+	var m2=document.getElementById("picScroll2");
+
+	function changeToLeft(){
+		if(m.scrollLeft-m1.offsetWidth>=0){
+			m.scrollLeft=0;
+		}
+		else{
+			m.scrollLeft++;
+		}
+}
+	tab2.innerHTML=tab1.innerHTML
+	var n=setInterval(changeToLeft,speed);
+	m.onmouseover=function() {clearInterval(n)};
+	m.onmouseout=function() {n=setInterval(changeToLeft,speed)};
+</script>
+</body>
+</html>
